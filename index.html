@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paiement CryptoPOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="flags">
+    <img src="fr.png" alt="Français" onclick="setLanguage('fr')">
+    <img src="gb.png" alt="English" onclick="setLanguage('en')">
+  </div>
+  <div class="container">
+    <img src="logo_cryptopos.png" alt="CryptoPOS Logo" class="logo">
+    <h2 id="title">Paiement avec CryptoPOS</h2>
+
+    <label for="amount" id="label-amount">Montant en</label>
+    <input type="number" id="amount" placeholder="0.00">
+
+    <label for="currency" id="label-currency">Devise</label>
+    <select id="currency">
+      <option value="eur">EUR</option>
+      <option value="usd">USD</option>
+      <option value="chf">CHF</option>
+    </select>
+
+    <label for="crypto" id="label-crypto">Crypto</label>
+    <select id="crypto">
+      <option value="eth">Ethereum (ETH)</option>
+      <option value="usdt">Tether (USDT)</option>
+      <option value="usdc">USD Coin (USDC)</option>
+      <option value="dai">Dai (DAI)</option>
+      <option value="matic">Polygon (MATIC)</option>
+      <option value="bnb">BNB</option>
+    </select>
+
+    <div id="conversion">≈ 0.000000 ETH</div>
+
+    <label for="recipient" id="label-recipient">Adresse du commerçant</label>
+    <input type="text" id="recipient" placeholder="0x...">
+
+    <button onclick="connectWallet()">🦊 Se connecter à MetaMask</button>
+    <button onclick="sendPayment()">Envoyer</button>
+
+    <p id="wallet-status"></p>
+
+    <div class="meta">
+      <img src="logo_metamask.png" alt="MetaMask Logo" class="icon">
+      <p id="browser-recommend">Navigateur recommandé :</p>
+      <div class="browsers">
+        <img src="logo_mozilla.webp" alt="Mozilla Firefox" class="icon">
+        <img src="logo_chrome.webp" alt="Google Chrome" class="icon">
+        <img src="logo_edge.webp" alt="Microsoft Edge" class="icon">
+      </div>
+      <p class="secure">✅ Paiement 100 % sécurisé via la blockchain 🔒</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="debug_script.js"></script>
+</body>
+</html>
